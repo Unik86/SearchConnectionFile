@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>com.work.plugin.SearchConnectionFile</id>
   <name>Search Connection File</name>
-  <version>1.10</version>
+  <version>1.01</version>
   <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
   <description><![CDATA[
