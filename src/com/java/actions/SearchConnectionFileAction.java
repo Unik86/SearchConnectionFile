@@ -27,7 +27,10 @@ public class SearchConnectionFileAction extends AnAction {
         findModel.setMultipleFiles(true);
         findModel.setProjectScope(true);
 
-        findModel.setStringToFind(fileName);
+        findModel.setRegularExpressions(true);
+        findModel.setFileFilter("*.php");
+
+        findModel.setStringToFind("@include\\(['\"]{1}.*[\\/\\.]{1}(" + fileName + ").*['\"]{1}");
 
         FindInProjectManager find = new FindInProjectManager(project);
         find.startFindInProject(findModel);
