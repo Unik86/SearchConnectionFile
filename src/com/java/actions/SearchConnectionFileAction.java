@@ -17,11 +17,8 @@ public class SearchConnectionFileAction extends AnAction {
     public void actionPerformed(AnActionEvent e) {
         VirtualFile file = e.getData(PlatformDataKeys.VIRTUAL_FILE);
         Project project = e.getData(PlatformDataKeys.PROJECT);
-        java.lang.String fileName = file.getPath();
-
-
-        fileName = fileName.substring(fileName.indexOf("views")+5, fileName.length()-10);
-//        fileName = fileName.replace(".blade.php", "");
+        java.lang.String fileName = file.getName();
+        fileName = fileName.replace(".blade.php", "");
 
         FindModel findModel = new FindModel();
         findModel.setWholeWordsOnly(true);
